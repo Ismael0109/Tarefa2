@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - Evento Técnico</title>
+  <link rel="stylesheet" href="css/evento.css">
+  <script src="javascript/validar.js"></script>
+</head>
+
+<body onload="Impossibilitar()">
+
+  <div class="container">
+    <header>
+      <img src="imagens/logo.png" alt="Logo SENAI" class="logo">
+      <h2>Inscrição no Evento Técnico</h2>
+    </header>
+
+    <form onsubmit="return Obrigatorio()">
+      <div class="form-group">
+        <label for="participante">Nome do Participante:</label>
+        <input type="text" id="participante" name="participante" >
+      </div>
+
+      <div class="form-group">
+        <label for="instituicao">Instituição:</label>
+        <input type="text" id="instituicao" name="instituicao">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="area">Área de Interesse:</label>
+          <select id="area" name="area">
+            <option value="">Selecione</option>
+            <option value="automacao">Automação</option>
+            <option value="informatica">Informática</option>
+            <option value="eletrotecnica">Eletrotécnica</option>
+            <option value="logistica">Logística</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="turno">Turno preferido:</label>
+          <select id="turno" name="turno">
+            <option value="">Selecione</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="presenca">Você poderá participar presencialmente?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="presenca" value="sim" required> Sim</label>
+          <label><input type="radio" name="presenca" value="nao"> Não</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comentarios">Comentários adicionais:</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Dúvidas, restrições alimentares, etc."></textarea>
+      </div>
+
+      <button type="submit">Confirmar Inscrição</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
+
